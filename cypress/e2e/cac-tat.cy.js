@@ -114,6 +114,7 @@ describe("Central de Atendimento ao Cliente TAT", () => {
       .should(($input) => {
         expect($input[0].files[0].name).to.equal('oracleInfrastructure.jpg')
       })
+      
   })
   
 })
