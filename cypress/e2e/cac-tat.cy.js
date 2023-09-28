@@ -124,5 +124,17 @@ describe("Central de Atendimento ao Cliente TAT", () => {
         expect($input[0].files[0].name).to.equal('oracleInfrastructure.jpg')
       })
   })
-  
+
+  it('seleciona um arquivo utilizando uma fixture na qual foi dado um alias', () => {
+    cy.fixture('oracleInfrastructure.jpg').as('certificadoFile')
+    cy.get('input[type="file"]')
+      .selectFile('@certificadoFile')
+      .should(($input) => {
+        expect($input[0].files[0].name).to.equal('oracleInfrastructure.jpg')
+      })
+  })  
+
+  it('verifica que a politica de privacidade abre em outra aba sem a necessidade de um click', () => {
+    cy.get('#privacy a').should('have.attr', 'target', '_blank')
+  })
 })
