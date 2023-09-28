@@ -107,14 +107,22 @@ describe("Central de Atendimento ao Cliente TAT", () => {
       .uncheck()
       .should("not.be.checked")
   })
-  it.only('seleciona um arquivo simulando um drag-and=drop', () =>{
+  it('seleciona um arquivo da pasta fixtures', () =>{
     cy.get('input[type="file"]')
     .should('not.have.value')
       .selectFile('./cypress/fixtures/oracleInfrastructure.jpg')
       .should(($input) => {
         expect($input[0].files[0].name).to.equal('oracleInfrastructure.jpg')
       })
-      
+  })
+
+  it('seleciona um arquivo simulando um drag-and=drop', () =>{
+    cy.get('input[type="file"]')
+    .should('not.have.value')
+      .selectFile('./cypress/fixtures/oracleInfrastructure.jpg', { action: 'drag-drop'})
+      .should(($input) => {
+        expect($input[0].files[0].name).to.equal('oracleInfrastructure.jpg')
+      })
   })
   
 })
