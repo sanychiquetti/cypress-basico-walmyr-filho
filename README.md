@@ -44,6 +44,13 @@ No terminal de comando digite: `npm run test:mobile` para abrir o cypress no mod
 
 Ou `npm run cy:open:mobile` para abrir Cypress no mode interativo 
 
+### Minha primeira integração continua ❤️
+
+<div>
+<a href="#" target="_blank"><img cypress="./fixtures/pipeline.jpg"></a>
+</div>
+
+
 ## Deixe uma estrelinha se gostou dos meus testes ⭐
 
 Este é mais um dos cursos que fiz com o Walmyr Filho da Escola Talking About Testing.
