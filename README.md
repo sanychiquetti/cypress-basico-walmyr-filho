@@ -40,7 +40,7 @@ Ou `npm run cy:open` para abrir Cypress no mode interativo
 
 ### Mobile
 
-No terminal de comando digite: `npm  run test:mobile` para abrir o cypress no modo  headless
+No terminal de comando digite: `npm run test:mobile` para abrir o cypress no modo  headless
 
 Ou `npm run cy:open:mobile` para abrir Cypress no mode interativo 
 
