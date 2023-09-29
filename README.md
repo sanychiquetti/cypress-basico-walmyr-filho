@@ -2,13 +2,14 @@
 👋 Seja bem-vindo(a)!
 
 ## Meus testes passando ❤️❤️❤️
+
 <video controls width="300">
   <source src="cypress/fixtures/meusTestesPassando.webm" type="video/webm" alt="Video dos meus testes passando">
   </video>
 
 Nesse curso eu aprimorei meus conhecimentos de cypress, e aproveitei para testar a última versão que no momento é a 13.3. Eu ameiiii❤️
 
-Então, se desejar ver meus testes passando e até sugerir idéias... é necessário ter os seguintes sistemas instalados no seu computador: 
+Então, se desejar baixar meu código e até sugerir idéias... é necessário ter os seguintes sistemas instalados no seu computador: 
 
 - [git](https://git-scm.com/) (estou usando a versão `2.37.2`)
 - [Node.js](https://nodejs.org/en/) (estou usando a versão `v18.16.0`)
