@@ -36,7 +36,7 @@ describe("Central de Atendimento ao Cliente TAT", () => {
   })
 
   Cypress._.times(3, () => {
-    it.only("validando que campo telefone só aceita números", () => {
+    it("validando que campo telefone só aceita números", () => {
       cy.get("#phone").type("Nao preencher").should("have.value", "")
     })
   })
@@ -162,5 +162,30 @@ describe("Central de Atendimento ao Cliente TAT", () => {
       .invoke('removeAttr', 'target')
       .click()
     cy.contains('Talking About Testing').should('be.visible')
+  })
+
+  it('exibe e esconde mensagem de erro usando o .invoke', () => {
+    cy.get('.success')
+      .should('not.be.visible')
+      .invoke('show')
+      .should('be.visible')
+      .and('contain', "Mensagem enviada com sucesso.")
+      .invoke('hide')
+      .should('not.be.visible')
+    cy.get('.error')
+      .should('not.be.visible')
+      .invoke('show')
+      .should('be.visible')
+      .and('contain', "Valide os campos obrigatórios!")
+      .invoke('hide')
+      .should('not.be.visible')
+  })
+
+  it.only('preenche a area de texto usando o comando .invoke', () => {
+    const textoLongo = Cypress._.repeat('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 6)
+
+    cy.get('#open-text-area')
+      .invoke('val', textoLongo)
+      .should('have.value', textoLongo)
   })
 })
