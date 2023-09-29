@@ -3,7 +3,7 @@
 
 ## Meus testes passando ❤️❤️❤️
 <div>
-  <video controls width="300">
+  <video controls width="200">
     <source src="cypress/fixtures/meusTestesPassando.webm" type="video/webm" alt="Video dos meus testes passando">
   </video>
 </div>
