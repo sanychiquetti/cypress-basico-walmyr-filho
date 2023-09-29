@@ -3,6 +3,8 @@
 
 ## Meus testes passando ❤️❤️❤️
 
+[Veja o video aqui](https://github.com/sanychiquetti/cypress-basico-walmyr-filho/raw/main/cypress/fixtures/meusTestesPassando.webm)
+
   <video controls width="200">
  [Veja o video aqui]<source src="(https://github.com/sanychiquetti/cypress-basico-walmyr-filho/raw/main/cypress/fixtures/meusTestesPassando.webm)" type="video/webm" alt="Video dos meus testes passando">
   </video>
