@@ -35,8 +35,10 @@ describe("Central de Atendimento ao Cliente TAT", () => {
     cy.get(".error").should("not.be.visible")
   })
 
-  it("validando que campo telefone só aceita números", () => {
-    cy.get("#phone").type("Nao preencher").should("have.value", "")
+  Cypress._.times(3, () => {
+    it.only("validando que campo telefone só aceita números", () => {
+      cy.get("#phone").type("Nao preencher").should("have.value", "")
+    })
   })
 
   it("exibe msg de erro ao submeter o formulário qdo o campo se torna obrigatório mas não está preenchido", () => {
