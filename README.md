@@ -4,7 +4,7 @@
 ## Meus testes passando ❤️❤️❤️
 <div>
   <video controls width="200">
-    <source src="(https://github.com/sanychiquetti/cypress-basico-walmyr-filho/blob/main/cypress/fixtures/meusTestesPassando.webm)" type="video/webm" alt="Video dos meus testes passando">
+    <source src="(https://github.com/sanychiquetti/cypress-basico-walmyr-filho/raw/main/cypress/fixtures/meusTestesPassando.webm)" type="video/webm" alt="Video dos meus testes passando">
   </video>
 </div>
 
