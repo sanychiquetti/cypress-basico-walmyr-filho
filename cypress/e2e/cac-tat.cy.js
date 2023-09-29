@@ -3,6 +3,7 @@ describe("Central de Atendimento ao Cliente TAT", () => {
     cy.visit("./src/index.html")
   })
 
+  const TRES_SEGUNDOS_EM_MS = 3000
   it("verifica o título da aplicação", () => {
     cy.title().should("eq", "Central de Atendimento ao Cliente TAT")
   })
@@ -10,21 +11,28 @@ describe("Central de Atendimento ao Cliente TAT", () => {
   it("preenchendo os campos obrigatórios e enviando o formulário", () => {
     const textoLongo =
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies risus nec massa sagittis vestibulum. Nullam quis elit facilisis, luctus dui at, fringilla diam.";
+    cy.clock()
+
     cy.get("#firstName").type("Sany")
     cy.get("#lastName").type("Garcia")
     cy.get("#email").type("sanymara@hotmail.com");
     cy.get("#open-text-area").type(textoLongo, { delay: 0 })
     cy.contains("button", "Enviar").click()
     cy.get(".success").should("be.visible")
+    cy.tick(TRES_SEGUNDOS_EM_MS)
+    cy.get(".success").should("not.be.visible")
   })
 
   it("exibindo msg de erro ao submeter o formulário com email com formatação errada", () => {
+    cy.clock()
     cy.get("#firstName").type("Sany")
     cy.get("#lastName").type("Garcia")
     cy.get("#email").type("sanymara.hotmail.com")
     cy.get("#open-text-area").type("Olá, Como digitar na próxima linha?")
     cy.contains("button", "Enviar").click()
     cy.get(".error").should("be.visible")
+    cy.tick(TRES_SEGUNDOS_EM_MS)
+    cy.get(".error").should("not.be.visible")
   })
 
   it("validando que campo telefone só aceita números", () => {
@@ -32,6 +40,7 @@ describe("Central de Atendimento ao Cliente TAT", () => {
   })
 
   it("exibe msg de erro ao submeter o formulário qdo o campo se torna obrigatório mas não está preenchido", () => {
+    cy.clock()
     cy.get("#firstName").type("Sany")
     cy.get("#lastName").type("Garcia")
     cy.get("#email").type("sany@hotmail.com")
@@ -39,6 +48,8 @@ describe("Central de Atendimento ao Cliente TAT", () => {
     cy.get("#open-text-area").type("Olá, Como digitar na próxima linha?")
     cy.contains("button", "Enviar").click()
     cy.get(".error").should("be.visible")
+    cy.tick(TRES_SEGUNDOS_EM_MS)
+    cy.get(".error").should("not.be.visible")
   })
 
   it("preenche e limpa os campos nome, sobrenome, email e telefone", () => {
@@ -65,13 +76,19 @@ describe("Central de Atendimento ao Cliente TAT", () => {
   })
 
   it("exibindo msg de erro ao submeter o formulário com campos obrigatórios vazio", () => {
+    cy.clock()
     cy.contains("button", "Enviar").click()
     cy.get(".error").should("be.visible")
+    cy.tick(TRES_SEGUNDOS_EM_MS)
+    cy.get(".error").should("not.be.visible")
   })
 
   it("enviando o formulário com sucesso usando um comando customizado", () => {
+    cy.clock()
     cy.fillMandatoryFieldsAndSubmit()
     cy.get(".success").should("be.visible")
+    cy.tick(TRES_SEGUNDOS_EM_MS)
+    cy.get(".success").should("not.be.visible")
   })
 
   it("selecionando um produto (Youtube) por seu texto", () => {

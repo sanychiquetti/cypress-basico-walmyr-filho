@@ -47,7 +47,7 @@ Ou `npm run cy:open:mobile` para abrir Cypress no mode interativo
 ### Minha primeira integração continua ❤️
 
 <div>
-  <a><img src="./cypress/fixtures/pipeline.jpg" alt="Imagem da pipeline de testes"></a>
+  <a><img src="cypress/fixtures/pipeline.jpg" alt="Imagem da pipeline de testes"></a>
   </div>
 
 ## Deixe uma estrelinha se gostou dos meus testes ⭐
