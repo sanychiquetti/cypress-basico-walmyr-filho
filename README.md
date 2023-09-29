@@ -2,9 +2,9 @@
 👋 Seja bem-vindo(a)!
 
 ## Meus testes passando ❤️❤️❤️
-<div>
-  <a><img src="cypress/fixtures/meusTestesPassando.webm" alt="Video dos meus testes passando"></a>
-  </div>
+<video controls width="300">
+  <source src="cypress/fixtures/meusTestesPassando.webm" type="video/webm" alt="Video dos meus testes passando">
+  </video>
 
 Nesse curso eu aprimorei meus conhecimentos de cypress, e aproveitei para testar a última versão que no momento é a 13.3. Eu ameiiii❤️
 
