@@ -28,5 +28,22 @@ O que eu aprendi nesse *curso*:
 - Como executar os testes em um pipeline de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
 - Como criar uma documentação mínima para seu projeto de testes automatizados
 
+## Testes
+
+Você pode rodar os testes simulando um desktop ou uma versão viewport mobile. Veja como:
+
+### Desktop
+
+No terminal de comando digite: `npm test` para abrir o cypress no modo  headless
+
+Ou `npm run cy:open` para abrir Cypress no mode interativo 
+
+### Mobile
+
+No terminal de comando digite: `npm  run test:mobile` para abrir o cypress no modo  headless
+
+Ou `npm run cy:open:mobile` para abrir Cypress no mode interativo 
+
+## Deixe uma estrelinha se gostou dos meus testes ⭐
 
 Este é mais um dos cursos que fiz com o Walmyr Filho da Escola Talking About Testing.
