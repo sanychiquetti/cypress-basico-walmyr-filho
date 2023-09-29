@@ -5,11 +5,6 @@
 
 [Veja o video aqui](https://github.com/sanychiquetti/cypress-basico-walmyr-filho/raw/main/cypress/fixtures/meusTestesPassando.webm)
 
-  <video controls width="200">
- [Veja o video aqui]<source src="(https://github.com/sanychiquetti/cypress-basico-walmyr-filho/raw/main/cypress/fixtures/meusTestesPassando.webm)" type="video/webm" alt="Video dos meus testes passando">
-  </video>
-
-
 Nesse curso eu aprimorei meus conhecimentos de cypress, e aproveitei para testar a última versão que no momento é a 13.3. Eu ameiiii❤️
 
 Então, se desejar baixar meu código e até sugerir idéias... é necessário ter os seguintes sistemas instalados no seu computador: 
